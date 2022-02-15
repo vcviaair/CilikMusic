@@ -1,4 +1,4 @@
-<h2 align="centre">Kyy Music Player</h2>
+<h2 align="centre">Cilik Music Player</h2>
 
 <p align="center">
   <img src="https://telegra.ph/file/2b610c918dec590d2777b.jpg">
@@ -66,8 +66,9 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 - PyTgCalls
 
 #### Contributors
-- [Kyy](https://github.com/muhammadrizky16): Nasty Owner
-- [KenKan](https://github.com/kenkansaja): Contributor
+- [Grey](https://github.com/grey423): Cilik Owner
+- [Kyy](https://github.com/muhammadrizky16): Nasty Dev
+- [KenKan](https://github.com/kenkansaja): Musikku Dev
 - [xD_ShaShank](https://github.com/theshashankk): Yukki Dev
 - [VegetaxD](http://github.com/VegetaxD): Yukki Owner 
 - [Laky](https://github.com/Laky-64): PyTgCalls Developer
