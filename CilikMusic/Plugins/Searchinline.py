@@ -5,7 +5,7 @@ from pyrogram.types import (
     InputTextMessageContent,
 )
 from youtubesearchpython import VideosSearch
-from Music import app
+from CilikMusic import app
 from pyrogram import Client
 
 @app.on_inline_query()
