@@ -1,10 +1,10 @@
 import os
 import speedtest
 import wget
-from Music.MusicUtilities.helpers.gets import bytes
-from Music import app, SUDOERS, BOT_ID
+from CilikMusic.MusicUtilities.helpers.gets import bytes
+from CilikMusic import app, SUDOERS, BOT_ID
 from pyrogram import filters, Client
-from Music.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
+from CilikMusic.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
 from pyrogram.types import Message
 
 @app.on_message(filters.command("speedtest") & ~filters.edited)
