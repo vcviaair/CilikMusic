@@ -1,4 +1,4 @@
-class DurationLimitError(Exception):u
+class DurationLimitError(Exception):
     pass
 
 
