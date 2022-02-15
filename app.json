@@ -1,8 +1,8 @@
 {
-    "name": "KyyMusic",
+    "name": "CilikMusic",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/muhamadrizky16/KyyMusic",
+    "repository": "https://github.com/grey423/CilikMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -16,6 +16,11 @@
         },
         "ASS_ID": {
             "description": "isi dengan telegram id akun assistant",
+            "required": true,
+            "value": ""
+        },
+        "MUSIC_BOT_NAME": {
+            "description": "A name for your Music Bot.",
             "required": true,
             "value": ""
         },
