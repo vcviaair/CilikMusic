@@ -1,14 +1,14 @@
 import os
 
 import yt_dlp
-from Music import BOT_NAME, BOT_USERNAME, app
-from Music.config import DURATION_LIMIT
-from Music.MusicUtilities.database.chats import is_served_chat
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import get_url
-from Music.MusicUtilities.helpers.inline import search_markup
-from Music.MusicUtilities.helpers.thumbnails import down_thumb
-from Music.MusicUtilities.helpers.ytdl import ytdl_opts
+from CilikMusic import BOT_NAME, BOT_USERNAME, app
+from CilikMusic.config import DURATION_LIMIT
+from CilikMusic.MusicUtilities.database.chats import is_served_chat
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.gets import get_url
+from CilikMusic.MusicUtilities.helpers.inline import search_markup
+from CilikMusic.MusicUtilities.helpers.thumbnails import down_thumb
+from CilikMusic.MusicUtilities.helpers.ytdl import ytdl_opts
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython import VideosSearch
