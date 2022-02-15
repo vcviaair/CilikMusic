@@ -1,4 +1,4 @@
-from asyncio import QueueEmpty
+from asyncio import QueueEmptyo
 from pyrogram import Client, filters
 from pyrogram.types import (
     Message,
