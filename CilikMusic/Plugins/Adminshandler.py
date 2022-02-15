@@ -6,13 +6,12 @@ from pyrogram.types import (
     Message,
 )
 
-from Music import app
-from Music.MusicUtilities.tgcallsrun.music import pytgcalls as call_py
-
-from Music.MusicUtilities.helpers.decorators import authorized_users_only
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.tgcallsrun.queues import QUEUE, clear_queue
-from Music.MusicUtilities.tgcallsrun.video import skip_current_song, skip_item
+from CilikMusic import app
+from CilikMusic.MusicUtilities.tgcallsrun.music import pytgcalls as call_py
+from CilikMusic.MusicUtilities.helpers.decorators import authorized_users_only
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.tgcallsrun.queues import QUEUE, clear_queue
+from CilikMusic.MusicUtilities.tgcallsrun.video import skip_current_song, skip_item
 
 
 bttn = InlineKeyboardMarkup(
