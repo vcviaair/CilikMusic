@@ -6,7 +6,7 @@ import asyncio
 import shutil
 from pytube import YouTube
 from yt_dlp import YoutubeDL
-from Music import converter
+from CilikMusic import converter
 import yt_dlp
 import shutil
 import psutil
@@ -16,7 +16,7 @@ from pyrogram.types import Message, Voice
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream, InputStream
 from sys import version as pyver
-from Music import (
+from CilikMusic import (
     dbb,
     app,
     BOT_USERNAME,
@@ -27,7 +27,7 @@ from Music import (
     ASSUSERNAME,
     ASSMENTION,
 )
-from Music.MusicUtilities.tgcallsrun import (
+from CilikMusic.MusicUtilities.tgcallsrun import (
     music,
     convert,
     download,
@@ -38,7 +38,7 @@ from Music.MusicUtilities.tgcallsrun import (
     task_done,
     ASS_ACC,
 )
-from Music.MusicUtilities.database.queue import (
+from CilikMusic.MusicUtilities.database.queue import (
     get_active_chats,
     is_active_chat,
     add_active_chat,
@@ -47,18 +47,18 @@ from Music.MusicUtilities.database.queue import (
     is_music_playing,
     music_off,
 )
-from Music.MusicUtilities.database.onoff import (
+from CilikMusic.MusicUtilities.database.onoff import (
     is_on_off,
     add_on,
     add_off,
 )
-from Music.MusicUtilities.database.chats import (
+from CilikMusic.MusicUtilities.database.chats import (
     get_served_chats,
     is_served_chat,
     add_served_chat,
     get_served_chats,
 )
-from Music.MusicUtilities.helpers.inline import (
+from CilikMusic.MusicUtilities.helpers.inline import (
     play_keyboard,
     search_markup,
     play_markup,
@@ -66,42 +66,42 @@ from Music.MusicUtilities.helpers.inline import (
     audio_markup,
     play_list_keyboard,
 )
-from Music.MusicUtilities.database.blacklistchat import (
+from CilikMusic.MusicUtilities.database.blacklistchat import (
     blacklisted_chats,
     blacklist_chat,
     whitelist_chat,
 )
-from Music.MusicUtilities.database.gbanned import (
+from CilikMusic.MusicUtilities.database.gbanned import (
     get_gbans_count,
     is_gbanned_user,
     add_gban_user,
     add_gban_user,
 )
-from Music.MusicUtilities.database.theme import (
+from CilikMusic.MusicUtilities.database.theme import (
     _get_theme,
     get_theme,
     save_theme,
 )
-from Music.MusicUtilities.database.assistant import (
+from CilikMusic.MusicUtilities.database.assistant import (
     _get_assistant,
     get_assistant,
     save_assistant,
 )
-from Music.config import DURATION_LIMIT
-from Music.MusicUtilities.helpers.decorators import authorized_users_only
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import (
+from CilikMusic.config import DURATION_LIMIT
+from CilikMusic.MusicUtilities.helpers.decorators import authorized_users_only
+from CilikMusic.MusicUtilities.helpers.decorators import errors
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.gets import (
     get_url,
     themes,
     random_assistant,
     ass_det,
 )
-from Music.MusicUtilities.helpers.logger import LOG_CHAT
-from Music.MusicUtilities.helpers.thumbnails import gen_thumb
-from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
-from Music.MusicUtilities.helpers.ytdl import ytdl_opts 
-from Music.MusicUtilities.helpers.inline import (
+from CilikMusic.MusicUtilities.helpers.logger import LOG_CHAT
+from CilikMusic.MusicUtilities.helpers.thumbnails import gen_thumb
+from CilikMusic.MusicUtilities.helpers.chattitle import CHAT_TITLE
+from CilikMusic.MusicUtilities.helpers.ytdl import ytdl_opts 
+from CilikMusic.MusicUtilities.helpers.inline import (
     play_keyboard,
     search_markup2,
     search_markup,
