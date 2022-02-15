@@ -4,13 +4,13 @@ import shutil
 import subprocess
 from sys import version as pyver
 
-from Music.config import get_queue
+from CilikMusic.config import get_queue
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Music import SUDOERS, app, db_mem, userbot
-from Music.MusicUtilities.database import get_active_chats, is_active_chat
-from Music.MusicUtilities.helpers.checker import checker, checkerCB
+from CilikMusic import SUDOERS, app, db_mem, userbot
+from CilikMusic.MusicUtilities.database import get_active_chats, is_active_chat
+from CilikMusic.MusicUtilities.helpers.checker import checker, checkerCB
 
 from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
