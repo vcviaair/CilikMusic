@@ -7,7 +7,7 @@ from pyrogram.types import (
     InputMediaAudio,
     Message,
 )
-from Music import BOT_NAME, app
+from CilikMusic import BOT_NAME, app
 from pyrogram import Client, filters
 from youtubesearchpython import VideosSearch
 import lyricsgenius
