@@ -2,8 +2,8 @@ import time
 from datetime import datetime
 
 import psutil
-from Music import Music_START_TIME, app
-from Music.MusicUtilities.helpers.time import get_readable_time
+from CilikMusic import Music_START_TIME, MUSIC_BOT_NAME, app
+from CilikMusic.MusicUtilities.helpers.time import get_readable_time
 from pyrogram import filters
 
 
@@ -23,11 +23,14 @@ Disk: {disk}%
 
 @app.on_message(filters.command("ping"))
 async def ping(_, message):
-    uptime = await bot_sys_stats()
     start = datetime.now()
-    response = await message.reply_text("ping...")
+    response = await message.reply_photo(
+        photo="cache/Query.jpg",
+        caption=">> Pong!",
+    )
+    uptime = await bot_sys_stats()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
-    await response.edit(
-        f"**Pong !!**\n`💫{resp} ms`\n\n<b><u>Statistik Sistem Musik:</u></b>{uptime}"
+    await response.edit_text(
+        f"**Pong!**\n`⚡{resp} ms`\n\n<b><u>{MUSIC_BOT_NAME} System Stats:</u></b>{uptime}"
     )
