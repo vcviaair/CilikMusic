@@ -1,8 +1,8 @@
-from Music import app, SUDOERS
+from CilikMusic import app, SUDOERS
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from Music.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
-from Music.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
+from CilikMusic.MusicUtilities.helpers.filters import command
 
 
 @Client.on_message(command("player") & filters.user(SUDOERS))
