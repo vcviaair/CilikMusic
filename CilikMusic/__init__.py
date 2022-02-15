@@ -1,4 +1,4 @@
-print("[INFO]: INITIALIZING")y
+print("[INFO]: INITIALIZING")
 import asyncio
 import importlib
 import time
