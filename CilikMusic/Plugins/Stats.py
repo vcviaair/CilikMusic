@@ -16,15 +16,15 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls import __version__ as pytover
 
-from Music import (BOT_ID, BOT_NAME, SUDOERS, app, boottime)
-from Music import client as userbot
-from Music.MusicUtilities.database.gbanned import get_gbans_count
-from Music.MusicUtilities.database.chats import get_served_chats
-from Music.MusicUtilities.database.sudo import get_sudoers
-from Music.MusicUtilities.helpers.inline import (stats1, stats2, stats3, stats4, stats5,
+from CilikMusic import (BOT_ID, BOT_NAME, SUDOERS, app, boottime)
+from CilikMusic import client as userbot
+from CilikMusic.MusicUtilities.database.gbanned import get_gbans_count
+from CilikMusic.MusicUtilities.database.chats import get_served_chats
+from CilikMusic.MusicUtilities.database.sudo import get_sudoers
+from CilikMusic.MusicUtilities.helpers.inline import (stats1, stats2, stats3, stats4, stats5,
                           stats6)
 
-from Music.MusicUtilities.database.ping import get_readable_time
+from CilikMusic.MusicUtilities.database.ping import get_readable_time
 
 
 async def bot_sys_stats():
