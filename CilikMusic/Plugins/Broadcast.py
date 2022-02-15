@@ -1,9 +1,9 @@
 import asyncio
-from Music import app, OWNER
+from CilikMusic import app, OWNER
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from Music.MusicUtilities.database.chats import (get_served_chats, is_served_chat, add_served_chat, get_served_chats)
-from Music.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.database.chats import (get_served_chats, is_served_chat, add_served_chat, get_served_chats)
+from CilikMusic.MusicUtilities.helpers.filters import command
 
 
 @app.on_message(filters.command("broadcast_pin") & filters.user(OWNER))
