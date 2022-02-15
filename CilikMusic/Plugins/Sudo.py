@@ -1,7 +1,7 @@
 import os
 
-from Music import OWNER, app
-from Music.MusicUtilities.database.sudo import add_sudo, get_sudoers, remove_sudo
+from CilikMusic import OWNER, app
+from CilikMusic.MusicUtilities.database.sudo import add_sudo, get_sudoers, remove_sudo
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -27,7 +27,7 @@ async def useradd(_, message: Message):
             await message.reply_text(
                 f"Ditambahkan **{user.mention}** Sebagai Pengguna sudo"
             )
-            return os.execvp("python3", ["python3", "-m", "Music"])
+            return os.execvp("python3", ["python3", "-m", "CilikMusic"])
         await edit_or_reply(message, text="Terjadi kesalahan, periksa log.")
         return
     message.from_user.id
@@ -39,7 +39,7 @@ async def useradd(_, message: Message):
     added = await add_sudo(user_id)
     if added:
         await message.reply_text(f"Ditambahkan **{mention}** Sebagai Pengguna Sudo")
-        return os.execvp("python3", ["python3", "-m", "Music"])
+        return os.execvp("python3", ["python3", "-m", "CilikMusic"])
     await edit_or_reply(message, text="Terjadi kesalahan, periksa log.")
     return
 
@@ -62,7 +62,7 @@ async def userdel(_, message: Message):
         removed = await remove_sudo(user.id)
         if removed:
             await message.reply_text(f"Menghapus **{user.mention}** dari Sudo.")
-            return os.execvp("python3", ["python3", "-m", "Music"])
+            return os.execvp("python3", ["python3", "-m", "CilikMusic"])
         await message.reply_text(f"Sesuatu yang salah terjadi.")
         return
     message.from_user.id
@@ -73,7 +73,7 @@ async def userdel(_, message: Message):
     removed = await remove_sudo(user_id)
     if removed:
         await message.reply_text(f"Menghapus **{mention}** dari Sudo.")
-        return os.execvp("python3", ["python3", "-m", "Music"])
+        return os.execvp("python3", ["python3", "-m", "CilikMusic"])
     await message.reply_text(f"Something wrong happened.")
 
 
