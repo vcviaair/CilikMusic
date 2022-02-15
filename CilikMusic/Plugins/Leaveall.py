@@ -1,8 +1,8 @@
 import asyncio
 
-from Music import BOT_USERNAME, SUDOERS
-from Music import client as USER
-from Music.MusicUtilities.helpers.filters import command
+from CilikMusic import BOT_USERNAME, SUDOERS
+from CilikMusic import client as USER
+from CilikMusic.MusicUtilities.helpers.filters import command
 from pyrogram import Client, filters
 
 
