@@ -7,31 +7,31 @@ import traceback
 from inspect import getfullargspec
 from io import StringIO
 from time import time
-from Music.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
-from Music.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
-from Music.MusicUtilities.database.blacklistchat import (blacklisted_chats, blacklist_chat, whitelist_chat)
-from Music.MusicUtilities.database.gbanned import (get_gbans_count, is_gbanned_user, add_gban_user, add_gban_user)
-from Music.MusicUtilities.database.theme import (_get_theme, get_theme, save_theme)
-from Music.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
-from Music.config import DURATION_LIMIT
-from Music.MusicUtilities.tgcallsrun import (music, clear, get, is_empty, put, task_done)
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import (get_url, themes, random_assistant)
-from Music.MusicUtilities.helpers.logger import LOG_CHAT
-from Music.MusicUtilities.helpers.thumbnails import gen_thumb
-from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
-from Music.MusicUtilities.helpers.ytdl import ytdl
-from Music.MusicUtilities.helpers.inline import (play_keyboard, search_markup)
+from CilikMusic.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
+from CilikMusic.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
+from CilikMusic.MusicUtilities.database.blacklistchat import (blacklisted_chats, blacklist_chat, whitelist_chat)
+from CilikMusic.MusicUtilities.database.gbanned import (get_gbans_count, is_gbanned_user, add_gban_user, add_gban_user)
+from CilikMusic.MusicUtilities.database.theme import (_get_theme, get_theme, save_theme)
+from CilikMusic.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
+from CilikMusic.config import DURATION_LIMIT
+from CilikMusic.MusicUtilities.tgcallsrun import (music, clear, get, is_empty, put, task_done)
+from CilikMusic.MusicUtilities.helpers.decorators import errors
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.gets import (get_url, themes, random_assistant)
+from CilikMusic.MusicUtilities.helpers.logger import LOG_CHAT
+from CilikMusic.MusicUtilities.helpers.thumbnails import gen_thumb
+from CilikMusic.MusicUtilities.helpers.chattitle import CHAT_TITLE
+from CilikMusic.MusicUtilities.helpers.ytdl import ytdl
+from CilikMusic.MusicUtilities.helpers.inline import (play_keyboard, search_markup)
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from sys import version as pyver
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Music import app, SUDOERS, OWNER
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.database.functions import start_restart_stage
+from CilikMusic import app, SUDOERS, OWNER
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.decorators import errors
+from CilikMusic.MusicUtilities.database.functions import start_restart_stage
 
 @Client.on_message(command("update") & filters.user(OWNER))
 @errors
