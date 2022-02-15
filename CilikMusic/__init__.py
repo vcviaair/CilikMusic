@@ -9,17 +9,17 @@ import uvloop
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from motor.motor_asyncio import AsyncIOMotorClient as Bot
-from Music.config import MONGO_DB_URI as mango
+from CilikMusic.config import MONGO_DB_URI as mango
 from pyrogram import Client
 from pyrogram import Client as Bot
 from os import listdir, mkdir
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
 
-from Music.MusicUtilities.helpers.tasks import install_requirements
-from Music.converter.cli import app, userbot
-from Music import config
-from Music.config import (
+from CilikMusic.MusicUtilities.helpers.tasks import install_requirements
+from CilikMusic.converter.cli import app, userbot
+from CilikMusic import config
+from CilikMusic.config import (
     API_HASH,
     API_ID,
     BOT_TOKEN,
