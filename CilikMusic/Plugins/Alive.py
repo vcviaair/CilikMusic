@@ -1,5 +1,5 @@
 # © KenendyXMusic
-# Adjustment for yukki by Fariz <XBOT-MUSIC>
+# Adjustmentfor yukki by Fariz <XBOT-MUSIC>
 # Thanks Ken 💙
 # Ported by Fariz
 
