@@ -18,12 +18,12 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Music.config import (HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_BRANCH,
+from CilikMusic.config import (HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_BRANCH,
                     UPSTREAM_REPO,LOG_GROUP_ID)
-from Music import SUDOERS, app
-from Music.MusicUtilities.helpers.heroku import is_heroku, user_input
-from Music.MusicUtilities.helpers.paste import isPreviewUp  
-from Music.MusicUtilities.helpers.paste import paste as paste_queue
+from CilikMusic import SUDOERS, app
+from CilikMusic.MusicUtilities.helpers.heroku import is_heroku, user_input
+from CilikMusic.MusicUtilities.helpers.paste import isPreviewUp  
+from CilikMusic.MusicUtilities.helpers.paste import paste as paste_queue
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
