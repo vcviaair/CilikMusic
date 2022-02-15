@@ -1,4 +1,4 @@
-import time
+import timey
 from datetime import datetime
 
 import psutil
