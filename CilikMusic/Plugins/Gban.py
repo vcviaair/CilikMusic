@@ -1,13 +1,13 @@
 import asyncio
 
-from Music import BOT_ID, OWNER, app
-from Music.MusicUtilities.database.chats import get_served_chats
-from Music.MusicUtilities.database.gbanned import (
+from CilikMusic import BOT_ID, OWNER, app
+from CilikMusic.MusicUtilities.database.chats import get_served_chats
+from CilikMusic.MusicUtilities.database.gbanned import (
     add_gban_user,
     is_gbanned_user,
     remove_gban_user,
 )
-from Music.MusicUtilities.database.sudo import get_sudoers
+from CilikMusic.MusicUtilities.database.sudo import get_sudoers
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 
@@ -55,7 +55,7 @@ Waktu yang diharapkan: {len(served_chats)}
                 except Exception:
                     pass
             ban_text = f"""
-__**Larangan Global Baru pada Musik**__
+__**Larangan Global Baru pada Music**__
 **Asal:** {message.chat.title} [`{message.chat.id}`]
 **Pengguna Sudo:** {from_user.mention}
 **Pengguna yang Diblokir:** {user.mention}
@@ -110,7 +110,7 @@ Waktu yang diharapkan: {len(served_chats)}
                 except Exception:
                     pass
             ban_text = f"""
-__**Larangan Global Baru pada Musik**__
+__**Larangan Global Baru pada Music**__
 **Asal:** {message.chat.title} [`{message.chat.id}`]
 **Pengguna Sudo:** {from_user_mention}
 **Pengguna yang Diblokir:** {mention}
@@ -191,7 +191,7 @@ async def chat_watcher_func(_, message):
             return
         await message.reply_text(
             f"""
-{checking} secara global dilarang oleh Musik dan telah dikeluarkan dari obrolan.
+{checking} secara global dilarang oleh Music dan telah dikeluarkan dari obrolan.
 
 **Kemungkinan Alasan:** Potensi Spammer dan Penyalahguna.
 """
