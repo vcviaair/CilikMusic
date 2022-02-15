@@ -11,47 +11,47 @@ from pyrogram import Client, filters
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
-from Music import app, BOT_USERNAME, dbb, SUDOERS
+from CilikMusic import app, BOT_USERNAME, dbb, SUDOERS
 import os
 import yt_dlp
 from youtubesearchpython import VideosSearch
-from Music.config import LOG_GROUP_ID
-from Music.MusicUtilities.tgcallsrun import ASS_ACC
+from CilikMusic.config import LOG_GROUP_ID
+from CilikMusic.MusicUtilities.tgcallsrun import ASS_ACC
 from os import path
 import random
 import time as sedtime 
 import asyncio
 import shutil
 from time import time
-from Music import converter
+from CilikMusic import converter
 import aiohttp
 from aiohttp import ClientResponseError, ServerTimeoutError, TooManyRedirects
-from Music import dbb, app, BOT_USERNAME, BOT_ID, ASSID, ASSNAME, ASSUSERNAME, ASSMENTION
-from Music.MusicUtilities.tgcallsrun import (music, convert, download, clear, get, is_empty, put, task_done, smexy)
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.helpers.filters import command, other_filters
-from Music.MusicUtilities.helpers.paste import paste
-from Music.MusicUtilities.tgcallsrun import (music, clear, get, is_empty, put, task_done)
-from Music.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
-from Music.MusicUtilities.database.playlist import (get_playlist_count, _get_playlists, get_note_names, get_playlist, save_playlist, delete_playlist)
-from Music.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
-from Music.MusicUtilities.helpers.inline import (play_keyboard, search_markup, play_markup, playlist_markup, audio_markup)
-from Music.MusicUtilities.helpers.inline import play_keyboard, confirm_keyboard, play_list_keyboard, close_keyboard, confirm_group_keyboard
-from Music.MusicUtilities.tgcallsrun import (music, convert, download, clear, get, is_empty, put, task_done, smexy)
-from Music.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
-from Music.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
-from Music.MusicUtilities.database.blacklistchat import (blacklisted_chats, blacklist_chat, whitelist_chat)
-from Music.MusicUtilities.database.gbanned import (get_gbans_count, is_gbanned_user, add_gban_user, add_gban_user)
-from Music.MusicUtilities.database.theme import (_get_theme, get_theme, save_theme)
-from Music.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
-from Music.config import DURATION_LIMIT, ASS_ID
-from Music.MusicUtilities.helpers.decorators import errors
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import (get_url, themes, random_assistant, ass_det)
-from Music.MusicUtilities.helpers.thumbnails import gen_thumb
-from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
-from Music.MusicUtilities.helpers.ytdl import ytdl_opts 
-from Music.MusicUtilities.helpers.inline import (play_keyboard, search_markup, play_markup, playlist_markup)
+from CilikMusic import dbb, app, BOT_USERNAME, BOT_ID, ASSID, ASSNAME, ASSUSERNAME, ASSMENTION
+from CilikMusic.MusicUtilities.tgcallsrun import (music, convert, download, clear, get, is_empty, put, task_done, smexy)
+from CilikMusic.MusicUtilities.helpers.decorators import errors
+from CilikMusic.MusicUtilities.helpers.filters import command, other_filters
+from CilikMusic.MusicUtilities.helpers.paste import paste
+from CilikMusic.MusicUtilities.tgcallsrun import (music, clear, get, is_empty, put, task_done)
+from CilikMusic.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
+from CilikMusic.MusicUtilities.database.playlist import (get_playlist_count, _get_playlists, get_note_names, get_playlist, save_playlist, delete_playlist)
+from CilikMusic.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
+from CilikMusic.MusicUtilities.helpers.inline import (play_keyboard, search_markup, play_markup, playlist_markup, audio_markup)
+from CilikMusic.MusicUtilities.helpers.inline import play_keyboard, confirm_keyboard, play_list_keyboard, close_keyboard, confirm_group_keyboard
+from CilikMusic.MusicUtilities.tgcallsrun import (music, convert, download, clear, get, is_empty, put, task_done, smexy)
+from CilikMusic.MusicUtilities.database.queue import (is_active_chat, add_active_chat, remove_active_chat, music_on, is_music_playing, music_off)
+from CilikMusic.MusicUtilities.database.onoff import (is_on_off, add_on, add_off)
+from CilikMusic.MusicUtilities.database.blacklistchat import (blacklisted_chats, blacklist_chat, whitelist_chat)
+from CilikMusic.MusicUtilities.database.gbanned import (get_gbans_count, is_gbanned_user, add_gban_user, add_gban_user)
+from CilikMusic.MusicUtilities.database.theme import (_get_theme, get_theme, save_theme)
+from CilikMusic.MusicUtilities.database.assistant import (_get_assistant, get_assistant, save_assistant)
+from CilikMusic.config import DURATION_LIMIT, ASS_ID
+from CilikMusic.MusicUtilities.helpers.decorators import errors
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.gets import (get_url, themes, random_assistant, ass_det)
+from CilikMusic.MusicUtilities.helpers.thumbnails import gen_thumb
+from CilikMusic.MusicUtilities.helpers.chattitle import CHAT_TITLE
+from CilikMusic.MusicUtilities.helpers.ytdl import ytdl_opts 
+from CilikMusic.MusicUtilities.helpers.inline import (play_keyboard, search_markup, play_markup, playlist_markup)
 import requests
 from pyrogram.types import (
     CallbackQuery,
@@ -64,7 +64,7 @@ import re
 import aiofiles
 from pykeyboard import InlineKeyboard
 from pyrogram import filters
-from Music import aiohttpsession as session
+from CilikMusic import aiohttpsession as session
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
