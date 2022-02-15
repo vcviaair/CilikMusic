@@ -31,8 +31,7 @@ from CilikMusic.config import (
     SUDO_USERS,
     CHANNEL,
     GROUP,
-    BOT_USERNAME,
-    BOT_NAME,
+    MUSIC_BOT_NAME,
 )
 
 console = Console()
@@ -121,6 +120,7 @@ Music_START_TIME = time.time()
 loop = asyncio.get_event_loop()
 
 #BOT INFO
+MUSIC_BOT_NAME = MUSIC_BOT_NAME
 BOT_ID = 0
 BOT_NAME = ""
 BOT_USERNAME = ""
