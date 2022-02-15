@@ -1,6 +1,6 @@
 import asyncio
 import os
-from Music.MusicUtilities.tgcallsrun import ASS_ACC
+from CilikMusic.MusicUtilities.tgcallsrun import ASS_ACC
 
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
@@ -14,12 +14,12 @@ from pytgcalls.types.input_stream.quality import (
     MediumQualityVideo,
 )
 from youtubesearchpython import VideosSearch
-from Music.config import GROUP, CHANNEL
-from Music import BOT_NAME, BOT_USERNAME, app
-from Music.MusicUtilities.tgcallsrun.music import pytgcalls as call_py
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.logger import LOG_CHAT
-from Music.MusicUtilities.tgcallsrun.queues import (
+from CilikMusic.config import GROUP, CHANNEL
+from CilikMusic import BOT_NAME, BOT_USERNAME, app
+from CilikMusic.MusicUtilities.tgcallsrun.music import pytgcalls as call_py
+from CilikMusic.MusicUtilities.helpers.filters import command
+from CilikMusic.MusicUtilities.helpers.logger import LOG_CHAT
+from CilikMusic.MusicUtilities.tgcallsrun.queues import (
     QUEUE,
     add_to_queue,
     clear_queue,
@@ -201,7 +201,6 @@ async def vplay(c: Client, message: Message):
 
 🏷 **Nama:** [{songname[:999]}]({link})
 🎧 **Atas permintaan:** {requester}
-
 #️⃣ **Posisi antrian** {pos}
 """,
                     reply_markup=keyboard,
@@ -232,7 +231,6 @@ async def vplay(c: Client, message: Message):
 
 🏷 **Nama:** [{songname[:999]}]({link})
 🎧 **Atas permintaan:** {requester}
-
 💬 **Diputar di:** {message.chat.title}
 """,
                     reply_markup=keyboard,
@@ -274,7 +272,6 @@ async def vplay(c: Client, message: Message):
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
 🎧 **Atas permintaan:** {requester}
-
 #️⃣ **Posisi antrian** {pos}
 """,
                             reply_markup=keyboard,
@@ -303,7 +300,6 @@ async def vplay(c: Client, message: Message):
 🏷 **Nama:** [{songname[:999]}]({url})
 ⏱️ **Durasi:** {duration}
 🎧 **Atas permintaan:** {requester}
-
 💬 **Diputar di:** {message.chat.title}
 """,
                                 reply_markup=keyboard,
