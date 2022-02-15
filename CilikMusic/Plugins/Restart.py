@@ -2,9 +2,9 @@ import os
 import shutil
 from sys import version as pyver
 
-from Music import SUDOERS, app
-from Music.MusicUtilities.database.functions import start_restart_stage
-from Music.MusicUtilities.database.queue import get_active_chats, remove_active_chat
+from CilikMusic import SUDOERS, app
+from CilikMusic.MusicUtilities.database.functions import start_restart_stage
+from CilikMusic.MusicUtilities.database.queue import get_active_chats, remove_active_chat
 from pyrogram import filters
 
 
@@ -47,5 +47,5 @@ async def theme_func(_, message):
     await start_restart_stage(x.chat.id, x.message_id)
     os.execvp(
         f"python{str(pyver.split(' ')[0])[:3]}",
-        [f"python{str(pyver.split(' ')[0])[:3]}", "-m", "Music"],
+        [f"python{str(pyver.split(' ')[0])[:3]}", "-m", "CilikMusic"],
     )
