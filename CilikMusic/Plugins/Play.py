@@ -478,7 +478,7 @@ Saya perlu menjadi admin dengan beberapa izin:
             return await mystic.edit_text(
                 f"Lagu Tidak Ditemukan.\n**Kemungkinan Alasan:** {e}"
             )
-        thumb ="cache/IMG_20211230_211518_897.jpg"
+        thumb ="cache/Result.jpg"
         await mystic.delete()
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
@@ -821,7 +821,7 @@ async def popat(_,CallbackQuery):
 
 @app.on_message(filters.command("playplaylist"))
 async def play_playlist_cmd(_, message):
-    thumb ="cache/IMG_20211230_211509_034.jpg"
+    thumb ="cache/Result.jpg"
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     buttons = playlist_markup(user_name, user_id)
