@@ -445,13 +445,11 @@ Saya perlu menjadi admin dengan beberapa izin:
         if len(message.command) < 2:
             what = "Command"
             await LOG_CHAT(message, what)
-            user_name = message.from_user.first_name
-            thumb ="cache/IMG_20211230_165039_159.jpg"
-            buttons = playlist_markup(user_name, user_id)
-            hmo = await message.reply_photo(
-            photo=thumb, 
-            caption=("**Penggunaan:** /play [nama musik atau tautan youtube atau balas audio]\n\njika Anda ingin memutar daftar putar! Pilih yang dari bawah."),    
-            reply_markup=InlineKeyboardMarkup(buttons),
+            message.from_user.first_name
+            hmo = await message.reply_text(
+                """
+**Usage:** /play [nama musik atau tautan youtube atau balas audio]
+""",
             )
             return
         what = "Query Given"
@@ -485,7 +483,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
             photo=thumb,
-            caption=f"**🎵 Choose The Song :**\n\n1️⃣ <b>[{title1[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n2️⃣ <b>[{title2[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n3️⃣ <b>[{title3[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n4️⃣ <b>[{title4[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n5️⃣ <b>[{title5[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</u>\n └ ⚡ __Powered by {BOT_NAME}__",    
+            caption=(f"**🎵 Pilih Lagu Yang Ingin di Putar:**\n\n1️⃣ <b>[{title1[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n2️⃣ <b>[{title2[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n3️⃣ <b>[{title3[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n4️⃣ <b>[{title4[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n5️⃣ <b>[{title5[:25]}](https://www.youtube.com/watch?)</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</u>\n └ ⚡ __Powered by {BOT_NAME}__"),    
             reply_markup=InlineKeyboardMarkup(buttons),
         )
         disable_web_page_preview=True
@@ -805,7 +803,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**🎵 Choose The Song:**\n\n6️⃣ <b>[{title6[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n7️⃣ <b>[{title7[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n8️⃣ <b>[{title8[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n9️⃣ <b>[{title9[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n🔟 <b>[{title10[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})</u>\n └ ⚡ __Powered by {BOT_NAME}__",     
+            f"**🎵 Pilih Lagu Yang Ingin di Putar:**\n\n6️⃣ <b>[{title6[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n7️⃣ <b>[{title7[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n8️⃣ <b>[{title8[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n9️⃣ <b>[{title9[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n🔟 <b>[{title10[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})</u>\n └ ⚡ __Powered by {BOT_NAME}__",     
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -813,7 +811,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**🎵 Choose The Song:**\n\n1️⃣ <b>[{title1[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n2️⃣ <b>[{title2[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n3️⃣ <b>[{title3[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n4️⃣ <b>[{title4[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n5️⃣ <b>[{title5[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</u>\n └ ⚡ __Powered by {BOT_NAME}__",    
+            f"**🎵 Pilih Lagu Yang Ingin di Putar:**\n\n1️⃣ <b>[{title1[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n2️⃣ <b>[{title2[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n3️⃣ <b>[{title3[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n4️⃣ <b>[{title4[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})</u>\n └ ⚡ __Powered by {BOT_NAME}__\n\n5️⃣ <b>[{title5[:25]}]({url})</b>\n ├ 💡 <u>[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})</u>\n └ ⚡ __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
